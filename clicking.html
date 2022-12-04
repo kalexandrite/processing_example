@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <h2>Refresh the page to change the colors!</h2>
+    </div>
+    <div class="container">
+        <canvas data-processing-sources="colorshapes.pde" width="100vw" height="100vw"></canvas>
+        <canvas data-processing-sources="colorshapes.pde" width="100vw" height="100vw"></canvas>
+        <canvas data-processing-sources="colorshapes.pde" width="100vw" height="100vw"></canvas>
+    </div>
+
+</body>
+<div class="row">
+    <p>
+        <button id="back" onclick="goBack()"> </button>
+        <button id="forward" onclick="goForward()"> </button>
+    </p>
+</div>
+<script>
+    function setWidth(width) {
+        var canvas = document.getElementById("myCanvas");
+        canvas.width = width;
+    }
+</script>
+<script>
+    function next() {
+        window.history.forward();
+    }
+    function previous() {
+        window.history.back();
+    }
+</script>
+<script type="text/javascript" src="processing.js"></script>
+</html>
